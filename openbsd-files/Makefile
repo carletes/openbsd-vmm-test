@@ -12,7 +12,7 @@ all: \
 	cp dhcpd.conf $@
 	chown root: $@
 	rcctl stop dhcpd
-	rcctl start dhcpd
+	-rcctl start dhcpd
 
 /etc/hostname.bridge0: hostname.bridge0
 	cp hostname.bridge0 $@
@@ -45,4 +45,4 @@ all: \
 /etc/vm.conf: vm.conf
 	cp vm.conf $@
 	chown root: $@
-	vmctl reload
+	-vmctl reload
