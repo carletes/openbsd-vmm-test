@@ -1,0 +1,4 @@
+apmd_flags=-A
+dhcpd_flags=vether0
+pkg_scripts=messagebus
+vmd_flags=-vv

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+here=$(cd $(dirname $0) && pwd)
+pkg_info -mz | sort > ${here}/pkg-list
