@@ -1,5 +1,6 @@
 all: \
 	/etc/dhcpd.conf \
+	/etc/exports \
 	/etc/hostname.bridge0 \
 	/etc/hostname.vether0 \
 	/etc/pf.conf \
@@ -13,6 +14,11 @@ all: \
 	chown root: $@
 	rcctl stop dhcpd
 	-rcctl start dhcpd
+
+/etc/exports: exports
+	cp exports $@
+	chown root: $@
+	-rcctl reload mountd
 
 /etc/hostname.bridge0: hostname.bridge0
 	cp hostname.bridge0 $@

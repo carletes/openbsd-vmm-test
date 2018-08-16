@@ -1,4 +1,7 @@
 apmd_flags=-A
 dhcpd_flags=vether0
+mountd_flags=
+nfsd_flags=
 pkg_scripts=messagebus
+portmap_flags=
 vmd_flags=-vv
